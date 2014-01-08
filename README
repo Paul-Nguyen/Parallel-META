@@ -1,0 +1,38 @@
+Parallel-META 
+Version 2.4
+
+Fast begin
+
+Package Dependency
+    GCC 4.2 or higher
+    Blastall 2.2.24 or higher : http://mirrors.vbi.vt.edu/mirrors/ftp.ncbi.nih.gov/blast/executables/release/  
+    
+    For taxonomical analysis:
+       HMMER 3 : http://hmmer.janelia.org/software/
+       R, install package ape
+
+   For functional analysis
+       Velvet : http://www.ebi.ac.uk/~zerbino/velvet/, install to "Assem" folder in the package. 
+       FragGeneScan : http://omics.informatics.indiana.edu/FragGeneScan/, install to "GenePre" folder in the package.
+       Functional annotation database : http://www.computationalbioenergy.org/Released_Software/parallel-meta/databases/SEED.tar.gz, extract all files to "databases/SEED" folder.
+
+Install
+   tar -xzvf parallel-meta-2.0.tar.gz
+   cd parallel-meta
+   make
+   make func
+
+   export ParallelMETA=Path to Parallel-Meta
+   export PATH=$PATH:$ParallelMETA/bin
+
+Binary files
+   parallel-meta : taxonomical analysis pipeline
+   parallel-meta-func : functional analysis pipeline
+   ExtractRNA_plus : 16S & 18S rRNA extractor
+   class-tax : Visualizer
+
+Manual & Release Note
+   manual/Parallel-meta-2.4.pdf
+   manual/Releasenote-2.4.pdf
+More information
+   http://www.computationalbioenergy.org/parallel-meta.html
